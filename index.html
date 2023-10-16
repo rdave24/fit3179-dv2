@@ -87,13 +87,16 @@
         </div>
     </div>
 
+    <!---
+    JSON data for map of tracks in the world
+    --->
     <script>
         // Your Vega-Lite specification goes here
         var spec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
             "width": 550,
             "height": 350,
-            "data": { "url": "./data/formula_one.circuits.csv" },
+            "data": { "url": "https://raw.githubusercontent.com/rdave24/fit3179-dv2/main/data/formula_one.circuits.csv" },
             "projection": {
                 "type": "equalEarth"
             },
@@ -114,7 +117,7 @@
                             "field": "raceCount", 
                             "type": "quantitative",
                             "scale": {
-                                "range": ["#f1807e", "#ff0000"]
+                                "range": ["#f1807e", "#800000"]
                             }
                         }
                     }
