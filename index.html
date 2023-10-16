@@ -68,14 +68,13 @@
             <h1>Drivers</h1>
             <div class="grid-container-drivers">
                 <div class="grid-item-drivers-constructors-graph" id="driversMap"></div>
-                <div class="grid-item-tracks-constructors-text"> 
-                    The map visulation shows the location of all the tracks that Forumula One 
-                    has races in from 1950 onwards. While F1 claims to be an internation sport
-                    trying to reach most of the world, it is clear that the sport is still 
-                    Europe dominant. While the data is skewed due to the fact that the sport in
-                    its early years would race mainly in Europe and as of more recent year there
-                    have been more races in the other continents, in the latest season 9 out of 
-                    the 23 races were still in Europe.
+                <div class="grid-item-tracks-constructors-side"> 
+                    <div class="grid-item-drivers-constructors-pie-chart" id="driversPieChart"></div>
+                    <div class="grid-item-drivers-constructors-text">
+                        We can see most of the drivers that have ever won a championship are majoirty
+                        from Europe, with not a single winner from Asia. Michael Schumacher and Lewis
+                        Hamilton currently hold the record for the most championships won with 7 each.
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,32 +192,81 @@
 
 
     <!---
-    JSON data for map of tracks in Europe
+    JSON data for championship data
     --->
     <script>
         var spec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 350,
-    "data": {
-        "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.driversChampionships.csv"
-    },
-    "mark": {"type": "bar","color": "#f1807e"},
-    "encoding": {
-        "x": {"field": "fullName", "type": "nominal", "sort": null},
-        "y": {
-            "field": "championshipsWon",
-            "type": "quantitative",
-            "sort": "descending",
-            "scale": {"domain": [7, 0]} 
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": 550,
+            "height": 350,
+            "data": {
+                "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.driversChampionships.csv"
+            },
+            "mark": {"type": "bar","color": "#f1807e"},
+            "encoding": {
+                "x": {"field": "fullName", "type": "nominal", "sort": null, "axis": {"title": "Driver Name"}},
+                "y": {
+                    "field": "championshipsWon",
+                    "type": "quantitative",
+                    "sort": "descending",
+                    "scale": {"domain": [7, 0]},
+                    "axis": {"title": "Number of Championships Won"} 
+                }
+            }
         }
-    }
-}
 
 
 
         // Get the container element where you want to embed the chart
         var container = document.getElementById("driversMap");
+
+        // Embed the chart in the container
+        vegaEmbed(container, spec);
+    </script>
+
+
+    <!---
+    JSON data for pie chart of nationality of championship winners
+    --->
+    <script>
+        var spec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "data": {
+                "values": [
+                    {"Nationality": "British", "count": 10},
+                    {"Nationality": "German", "count": 3},
+                    {"Nationality": "Argentine", "count": 1},
+                    {"Nationality": "Brazilian", "count": 5},
+                    {"Nationality": "Austrian", "count": 2},
+                    {"Nationality": "Australian", "count": 2},
+                    {"Nationality": "Dutch", "count": 1},
+                    {"Nationality": "Spanish", "count": 1},
+                    {"Nationality": "Finnish", "count": 4},
+                    {"Nationality": "Italian", "count": 3},
+                    {"Nationality": "Canadian", "count": 1},
+                    {"Nationality": "New Zealander", "count": 1},
+                    {"Nationality": "South African", "count": 1},
+                    {"Nationality": "American", "count": 2}
+                ]
+            },
+            "mark": "arc",
+            "encoding": {
+                "theta": {"field": "count", "type": "quantitative"},
+                "color": {
+                    "field": "Nationality", 
+                    "type": "nominal",
+                    "scale": {
+                    "domain": ["British", "German", "Argentine", "Brazilian", "Austrian", "Australian", "Dutch", "Spanish", "Finnish", "Italian", "Canadian", "New Zealander", "South African", "American"],
+                    "range": ["#004225", "#808080", "#6CACE4", "#009739", "#40E0D0", "#FFCD00", "#F36C21", "#800080", "#002F6C", "#FF2800", "#FFB6C1", "#000000", "#FFFFFF", "#005A92"]
+                }},
+
+            }
+        }
+
+
+
+        // Get the container element where you want to embed the chart
+        var container = document.getElementById("driversPieChart");
 
         // Embed the chart in the container
         vegaEmbed(container, spec);

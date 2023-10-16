@@ -205,21 +205,38 @@
 
 .grid-item-drivers-constructors-graph {
     height: 350px; /* Adjust the height as needed */
-    width: 275%; /* Takes full width of the grid cell */
+    width: 250%; /* Takes full width of the grid cell */
     background-color: #3498db;
     color: black;
 	padding-bottom: 20px;
     text-align: center;
 }
 
-.grid-item-tracks-constructors-text {
+.grid-item-tracks-constructors-side {
     height: 350px; /* Adjust the height as needed */
     width: 100%; /* Takes full width of the grid cell */
-    background-color: #3498db;
+    background-color: white;
     color: black;
-    padding: 20px;
     text-align: center;
-	margin-left: 195%;
+	margin-left: 175%;
+	font-size: 16px;
+}
+
+.grid-item-drivers-constructors-pie-chart {
+    height: 150px; /* Adjust the height as needed */
+    width: 100%; /* Takes full width of the grid cell */
+    background-color: white;
+    color: black;
+    text-align: center;
+	font-size: 16px;
+}
+
+.grid-item-drivers-constructors-text {
+    height: 150px; /* Adjust the height as needed */
+    width: 125%; /* Takes full width of the grid cell */
+    background-color: white;
+    color: black;
+    text-align: center;
 	font-size: 16px;
 }
 
