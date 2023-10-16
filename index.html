@@ -25,6 +25,10 @@
     <div class="body-top">
         <div class="box-top">
 
+                <b>Formula One </b>is the highest class for open seater racing cars sanctioned by the 
+                Fêdêration Internationale de l'Automobile (FIA). The sport first started in 1950,
+                and currently has 10 teams, and 20 drivers every year. The following visulation will
+                cover the data from the kaggle set about the history of F1.
         </div>
     </div>
 
@@ -59,9 +63,21 @@
     </div>
 
 
-    <div class="body">
-        <div class="box">
+    <div class="body-drivers">
+        <div class="box-drivers">
             <h1>Drivers</h1>
+            <div class="grid-container-drivers">
+                <div class="grid-item-drivers-constructors-graph" id="driversMap"></div>
+                <div class="grid-item-tracks-constructors-text"> 
+                    The map visulation shows the location of all the tracks that Forumula One 
+                    has races in from 1950 onwards. While F1 claims to be an internation sport
+                    trying to reach most of the world, it is clear that the sport is still 
+                    Europe dominant. While the data is skewed due to the fact that the sport in
+                    its early years would race mainly in Europe and as of more recent year there
+                    have been more races in the other continents, in the latest season 9 out of 
+                    the 23 races were still in Europe.
+                </div>
+            </div>
         </div>
     </div>
 
@@ -87,7 +103,6 @@
     JSON data for map of tracks in the world
     --->
     <script>
-        // Your Vega-Lite specification goes here
         var spec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
             "width": 550,
@@ -129,9 +144,10 @@
         vegaEmbed(container, spec);
     </script>
 
-
+    <!---
+    JSON data for map of tracks in Europe
+    --->
     <script>
-        // Your Vega-Lite specification goes here
         var spec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
             "width": 400,
@@ -174,6 +190,7 @@
         // Embed the chart in the container
         vegaEmbed(container, spec);
     </script>
+
 </body>
 
 </html>
