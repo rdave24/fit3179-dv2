@@ -7,7 +7,12 @@
     },
     "mark": "bar",
     "encoding": {
-        "x": {"field": "surname","type": "nominal", "sort":null},
-        "y": {"field": "championshipsWon", "type": "quantitative", "sort": "descending"}
+        "x": {"field": "fullName","type": "nominal", "sort":null},
+        "y": {
+            "field": "championshipsWon", 
+            "type": "quantitative", 
+            "sort": "descending",
+            "scale": {"domain": [7, 0]}
+        }
     }
 }

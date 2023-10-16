@@ -191,6 +191,39 @@
         vegaEmbed(container, spec);
     </script>
 
+
+    <!---
+    JSON data for map of tracks in Europe
+    --->
+    <script>
+        var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 350,
+    "data": {
+        "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.driversChampionships.csv"
+    },
+    "mark": {"type": "bar","color": "#f1807e"},
+    "encoding": {
+        "x": {"field": "fullName", "type": "nominal", "sort": null},
+        "y": {
+            "field": "championshipsWon",
+            "type": "quantitative",
+            "sort": "descending",
+            "scale": {"domain": [7, 0]} 
+        }
+    }
+}
+
+
+
+        // Get the container element where you want to embed the chart
+        var container = document.getElementById("driversMap");
+
+        // Embed the chart in the container
+        vegaEmbed(container, spec);
+    </script>
+
 </body>
 
 </html>
