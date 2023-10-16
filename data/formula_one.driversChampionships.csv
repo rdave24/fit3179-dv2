@@ -1,34 +1,34 @@
-forename,surname,championshipsWon
-Lewis,Hamilton,7
-Michael,Schumacher,7
-Alain,Prost,5
-Juan,Fangio,5
-Sebastian,Vettel,4
-Nelson,Piquet,3
-Niki,Lauda,3
-Graham,Hill,3
-Jackie,Stewart,3
-Jack,Brabham,3
-Max,Verstappen,3
-Fernando,Alonso,2
-Mika,HŠkkinen,2
-Ayrton,Senna,2
-Emerson,Fittipaldi,2
-Jim,Clark,2
-Alberto,Ascari,2
-Nico,Rosberg,1
-Kimi,RŠikkšnen,1
-Jenson,Button,1
-Jacques,Villeneuve,1
-Damon,Hill,1
-Nigel,Mansell,1
-Keke,Rosberg,1
-Alan,Jones,1
-Mario,Andretti,1
-Jody,Scheckter,1
-James,Hunt,1
-Denny,Hulme,1
-Jochen,Rindt,1
-Phil,Hill,1
-Mike,Hawthorn,1
-Nino,Farina,1
+forename,surname,fullName,championshipsWon
+Lewis,Hamilton,Lewis Hamilton,7
+Michael,Schumacher,Micheal Schumacher,7
+Alain,Prost,Alain Prost,5
+Juan,Fangio,Juan Fangio,5
+Sebastian,Vettel,Sebastin Vettal,4
+Nelson,Piquet,Nelson Piquet,3
+Niki,Lauda,Niki Lauda,3
+Graham,Hill,Graham Hill,3
+Jackie,Stewart,Jackie Stewart,3
+Jack,Brabham,Jack Brabham,3
+Max,Verstappen,Max Verstappen,3
+Fernando,Alonso,Fernando Alonso,2
+Mika,HŠkkinen,Mika HŠkkinen,2
+Ayrton,Senna,Ayton Senna,2
+Emerson,Fittipaldi,Emerson Fittipaldi,2
+Jim,Clark,Jim Clark,2
+Alberto,Ascari,Alberto Ascari,2
+Nico,Rosberg,Nico Rosberg,1
+Kimi,RŠikkšnen,Kimi RŠikkšnen,1
+Jenson,Button,Jenson Button,1
+Jacques,Villeneuve,Jacques Villeneuve,1
+Damon,Hill,Damon Hill,1
+Nigel,Mansell,Nigel Mansell,1
+Keke,Rosberg,Keke Rosberg,1
+Alan,Jones,Alan Jones,1
+Mario,Andretti,Mario Andretti,1
+Jody,Scheckter,Jody Scheckter,1
+James,Hunt,James Hunt,1
+Denny,Hulme,Denny Hulme,1
+Jochen,Rindt,Jochen Rindt,1
+Phil,Hill,Phil Hill,1
+Mike,Hawthorn,Mike Hawthorn,1
+Nino,Farina,Nino Farina,1

@@ -3,17 +3,11 @@
     "width": 550,
     "height": 350,
     "data": {
-        "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.drivers.csv"
+        "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.driversChampionships.csv"
     },
     "mark": "bar",
     "encoding": {
-        "x": {"field": "surname", "type": "nominal"},
-        "y": {
-            "field": "championshipsWon",
-            "type": "quantitative",
-            "aggregate": "sum",
-            "title": "Total Championships Won"
-        },
-        "filter": {"field": "championshipsWon", "gt": 0} 
+        "x": {"field": "surname","type": "nominal", "sort":null},
+        "y": {"field": "championshipsWon", "type": "quantitative", "sort": "descending"}
     }
 }
