@@ -1,26 +1,18 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 550,
+    "height": 350,
     "data": {
-        "values": [
-            {"nationality": "British", "count": 10},
-            {"nationality": "German", "count": 3},
-            {"nationality": "Argentine", "count": 1},
-            {"nationality": "Brazilian", "count": 5},
-            {"nationality": "Austrian", "count": 2},
-            {"nationality": "Australian", "count": 2},
-            {"nationality": "Dutch", "count": 1},
-            {"nationality": "Spanish", "count": 1},
-            {"nationality": "Finnish", "count": 4},
-            {"nationality": "Italian", "count": 3},
-            {"nationality": "Canadian", "count": 1},
-            {"nationality": "New Zealander", "count": 1},
-            {"nationality": "South African", "count": 1},
-            {"nationality": "American", "count": 2}
-        ]
+        "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.driversChampionships.csv"
     },
-    "mark": "arc",
+    "mark": "bar",
     "encoding": {
-        "theta": {"field": "count", "type": "quantitative"},
-        "color": {"field": "nationality", "type": "nominal"}
+        "x": {"field": "fullName","type": "nominal", "sort":null},
+        "y": {
+            "field": "championshipsWon", 
+            "type": "quantitative", 
+            "sort": "descending",
+            "scale": {"domain": [7, 0]}
+        }
     }
 }

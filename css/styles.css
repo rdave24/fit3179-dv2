@@ -54,8 +54,8 @@
     justify-content: center;
 }
 
-.body-drivers{
-	height: 1500px;
+.body-champions{
+	height: 750px;
 	background-image: url('../images/background.png');
 	background-repeat: repeat-y;
 	background-color: black;
@@ -109,9 +109,9 @@
 	font-family: 'Titillium Web', sans-serif;
 }
 
-.box-drivers{
+.box-champions{
 	margin-top: 50px;
-	height: 1400px;
+	height: 650px;
 	width: 1000px;
 	background-color: white;
 	text-align: center;
@@ -194,7 +194,7 @@
 	font-size: 16px;
 }
 
-.grid-container-drivers {
+.grid-container-champions {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates columns with minimum width of 200px and equal distribution */
     grid-gap: 20px; /* Gap between grid items */
@@ -203,7 +203,7 @@
     padding: 20px; /* Padding around the grid */
 }
 
-.grid-item-drivers-constructors-graph {
+.grid-item-champions-graph {
     height: 350px; /* Adjust the height as needed */
     width: 250%; /* Takes full width of the grid cell */
     background-color: #3498db;
@@ -212,7 +212,7 @@
     text-align: center;
 }
 
-.grid-item-tracks-constructors-side {
+.grid-item-champions-side {
     height: 350px; /* Adjust the height as needed */
     width: 100%; /* Takes full width of the grid cell */
     background-color: white;
@@ -222,7 +222,7 @@
 	font-size: 16px;
 }
 
-.grid-item-drivers-constructors-pie-chart {
+.grid-item-champions-pie-chart {
     height: 150px; /* Adjust the height as needed */
     width: 100%; /* Takes full width of the grid cell */
     background-color: white;
@@ -231,7 +231,7 @@
 	font-size: 16px;
 }
 
-.grid-item-drivers-constructors-text {
+.grid-item-champions-text {
     height: 150px; /* Adjust the height as needed */
     width: 125%; /* Takes full width of the grid cell */
     background-color: white;
