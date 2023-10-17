@@ -266,6 +266,11 @@
 	font-family: 'Titillium Web', sans-serif;
 }
 
+.driver-select-option:hover {
+    background-color: white;
+    color: red;
+}
+
 .select-container {
     margin-bottom: 20px;
 }
