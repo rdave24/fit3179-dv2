@@ -3,7 +3,7 @@
   "width": 800,
   "height": 600,
   "data": {
-    "url": ""
+    "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.yearlyNationality.json"
   },
   "transform": [
     {"flatten": ["nationality"]},
