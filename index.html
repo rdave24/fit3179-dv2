@@ -79,7 +79,8 @@
 
     <div class="body-champions">
         <div class="box-champions">
-            <h1>Drivers - Championships</h1>
+            <h1>Drivers</h1>
+            <h3>Championships</h3>
             <div class="grid-container-champions">
                 <div class="grid-item-champions-graph" id="driversMap"></div>
                 <div class="grid-item-champions-side"> 
@@ -92,19 +93,29 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="body">
-        <div class="box">
-            <h1>Constructors</h1>
-            <div id="trackTimes"></div>
-        </div>
-    </div>
-
-    <div class="body">
-        <div class="box">
-            <h1>Other Fun Facts</h1>
+            <div class="padding"></div>
+            <h3>All Drivers</h3>
+            <div id="drivers"></div>
+            <div class="drivers-text">
+                If we look at all drivers, we can see that as the seasons went on, there have been
+                a decrease in the total number of drivers. This is in contract to there been less 
+                races in earlier seasons, which you would think would lead to less drivers. This 
+                however is not the case, and the reason for more drivers in earlier season is due 
+                to F1 being a more organised sport as the years went on. In early years of the sport
+                it was more of a with anyone allowed to drive thus leading to large number of drivers.
+                Most of these drivers would of raced in a single race, comapred to the latest seasons, 
+                where the drivers would be full time athelets that would be with the constructors for 
+                an entire, if not multiple seasons.
+            </div>
+            <div class="drivers-text">
+                .
+            </div>
+            <div class="drivers-text">
+                Another trend we can see if, that in the early years there were a large number of American
+                drivers, almost half of the drivers, with the other half being European drivers. From 1960's 
+                we can see that the number of American drivers has decreased, with the number of European 
+                being proportionally more.
+            </div>
         </div>
     </div>
 
@@ -350,6 +361,41 @@
         // Embed the chart in the container
         vegaEmbed(container, spec);
     </script>
+
+        <!---
+    JSON data for track times
+    --->
+    <script>
+        var spec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": 800,
+            "height": 600,
+            "data": {
+                "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.yearlyNationality.json"
+            },
+            "transform": [
+                {"flatten": ["nationality"]},
+                {"calculate": "1", "as": "count"}
+            ],
+            "encoding": {
+                "x": {"field": "count", "type": "quantitative", "title": "Number of Drivers"},
+                "y": {"field": "_id", "type": "ordinal", "title": "Year"},
+                "color": {"field": "nationality", "type": "nominal", "title": "Nationality", "scale": {"scheme": "category20"}}
+            },
+            "mark": "bar",
+            "config": {
+                "axisX": {"labelAngle": 0}
+            }
+        }
+    
+
+        // Get the container element where you want to embed the chart
+        var container = document.getElementById("drivers");
+
+        // Embed the chart in the container
+        vegaEmbed(container, spec);
+    </script>
+
 
 </body>
 

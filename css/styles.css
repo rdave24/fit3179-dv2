@@ -24,6 +24,10 @@
 	background: #E10800;
 }
 
+.padding {
+	padding: 70px;
+}
+
 .body-top{
 	height: 380px;
 	background-image: url('../images/background-top.png');
@@ -55,7 +59,7 @@
 }
 
 .body-champions{
-	height: 750px;
+	height: 1750px;
 	background-image: url('../images/background.png');
 	background-repeat: repeat-y;
 	background-color: black;
@@ -111,7 +115,7 @@
 
 .box-champions{
 	margin-top: 50px;
-	height: 650px;
+	height: 1650px;
 	width: 1000px;
 	background-color: white;
 	text-align: center;
@@ -235,6 +239,13 @@
     height: 150px; /* Adjust the height as needed */
     width: 125%; /* Takes full width of the grid cell */
     background-color: white;
+    color: black;
+    text-align: center;
+	font-size: 16px;
+}
+
+.drivers-text{
+	background-color: white;
     color: black;
     text-align: center;
 	font-size: 16px;

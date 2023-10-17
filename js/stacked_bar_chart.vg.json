@@ -10,9 +10,9 @@
     {"calculate": "1", "as": "count"}
   ],
   "encoding": {
-    "x": {"field": "_id", "type": "ordinal", "title": "Year"},
+    "x": {"field": "_id", "type": "ordinal", "title": "Year", "axis": {"labelAngle": 0, "labelAlign": "right"}},
     "y": {"field": "count", "type": "quantitative", "title": "Number of Drivers"},
-    "color": {"field": "nationality", "type": "nominal", "title": "Nationality"}
+    "color": {"field": "nationality", "type": "nominal", "title": "Nationality", "scale": {"scheme": "category20"}}
   },
   "mark": "bar",
   "config": {
