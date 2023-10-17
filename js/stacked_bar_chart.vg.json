@@ -1,19 +1,14 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.fastest_times.csv",
-      "format": {
-        "type": "csv"
-      }
-    },
-    "transform": [
-      {"fold": ["2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"], "as": ["Year", "Time"]}
-    ],
-    "mark": "line",
-    "encoding": {
-      "x": {"field": "Year", "type": "ordinal", "title": "Year"},
-      "y": {"field": "Time", "type": "quantitative", "title": "Lap Time"},
-      "color": {"field": "Track", "type": "nominal", "title": "Track"}
-    }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.fastest_times.json"
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "races.year", "type": "qualitiive", "title": "Year"},
+    "y": {"field": "races.fastestLapTime", "type": "quantitative", "title": "Fastest Lap Time"},
+    "color": {"field": "track", "type": "nominal", "title": "Track"}
   }
-  
+}
