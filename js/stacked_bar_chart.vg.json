@@ -5,10 +5,28 @@
   "data": {
     "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.fastest_times.json"
   },
-  "mark": "line",
+  "transform": [
+    {"flatten": ["races"]}
+  ],
   "encoding": {
-    "x": {"field": "races.year", "type": "quantitative", "title": "Year"},
-    "y": {"field": "races.fastestLapTime", "type": "temporal", "title": "Fastest Lap Time"},
-    "color": {"field": "track", "type": "nominal", "title": "Track"}
+    "x": {
+      "field": "races.year",
+      "type": "ordinal",
+      "title": "Year"
+    },
+    "y": {
+      "field": "races.fastestLapTime",
+      "type": "nominal",
+      "title": "Fastest Lap Time"
+    },
+    "color": {
+      "field": "_id",
+      "type": "nominal",
+      "title": "Track"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "point": true
   }
 }
