@@ -8,7 +8,7 @@
   "mark": "line",
   "encoding": {
     "x": {"field": "races.year", "type": "quantitative", "title": "Year"},
-    "y": {"field": "races.fastestLapTime", "type": "quantitative", "title": "Fastest Lap Time"},
+    "y": {"field": "races.fastestLapTime", "type": "temporal", "title": "Fastest Lap Time"},
     "color": {"field": "track", "type": "nominal", "title": "Track"}
   }
 }
