@@ -121,14 +121,8 @@
 
     <div class="body">
         <div class="box">
-            <select class="driver-select-option">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-                <option>Option 4</option>
-            </select>
+            <select class="driver-select-option" id="driverSelect"></select>
         </div>
-
     </div>
 
     <div class="body-bottom">
@@ -138,6 +132,36 @@
             guidelines. Additionally all data is gathered from the kaggle website https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020/data.
         </div>
     </div>
+
+
+    <script>
+        // Fetch data from the CSV file
+        fetch('https://raw.githubusercontent.com/example_username/example_repository/main/drivers.csv')
+            .then(response => response.text())
+            .then(csvData => {
+                // Parse CSV data
+                const csvRows = csvData.split('\n').slice(1); // Skip header row
+                const driverNames = new Set();
+                
+                // Extract distinct driver names
+                csvRows.forEach(row => {
+                    const columns = row.split(',');
+                    const driverName = columns[0].trim(); // Assuming driver names are in the first column
+                    driverNames.add(driverName);
+                });
+    
+                // Create select options
+                const selectElement = document.getElementById('driverSelect');
+                driverNames.forEach(driverName => {
+                    const optionElement = document.createElement('option');
+                    optionElement.textContent = driverName;
+                    selectElement.appendChild(optionElement);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
 
     <!---
     JSON data for map of tracks in the world
