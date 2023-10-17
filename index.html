@@ -121,7 +121,11 @@
 
     <div class="body">
         <div class="box">
-            <select class="driver-select-option" id="driverSelect"></select>
+            <h1>Drivers Wins - Map</h1>
+            <div class="select-container">
+                <select class="driver-select-option" id="driverSelect"></select>
+            </div>
+            <div class="data-container" id="driversWinsMap"></div>
         </div>
     </div>
 
@@ -136,26 +140,99 @@
 
     <script>
         // Fetch data from the CSV file
-        fetch('https://raw.githubusercontent.com/example_username/example_repository/main/drivers.csv')
+        fetch('https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.winners_circuits.csv')
             .then(response => response.text())
             .then(csvData => {
-                // Parse CSV data
-                const csvRows = csvData.split('\n').slice(1); // Skip header row
+                const csvRows = csvData.split('\n');
+                const driverSelect = document.getElementById('driverSelect');
+                const dataContainer = document.querySelector('.data-container');
+    
+                // Extract distinct driver names and populate the dropdown
                 const driverNames = new Set();
-                
-                // Extract distinct driver names
-                csvRows.forEach(row => {
+                csvRows.slice(1).forEach(row => {
                     const columns = row.split(',');
-                    const driverName = columns[0].trim(); // Assuming driver names are in the first column
+                    const driverName = columns[0].trim();
                     driverNames.add(driverName);
                 });
-    
-                // Create select options
-                const selectElement = document.getElementById('driverSelect');
                 driverNames.forEach(driverName => {
                     const optionElement = document.createElement('option');
                     optionElement.textContent = driverName;
-                    selectElement.appendChild(optionElement);
+                    driverSelect.appendChild(optionElement);
+                });
+    
+                // Event listener for dropdown selection change
+                driverSelect.addEventListener('change', () => {
+                    const selectedDriver = driverSelect.value;
+                    const filteredData = csvRows
+                        .slice(1)
+                        .filter(row => {
+                            const columns = row.split(',');
+                            const driverName = columns[0].trim();
+                            return driverName === selectedDriver;
+                        });
+    
+                    // Convert filtered data to JSON and print to console
+                    const jsonData = filteredData.map(row => {
+                        const columns = row.split(',');
+                        return {
+                            driver: columns[0].trim()??0,
+                            count: parseInt(columns[1])??0,
+                            long: parseFloat(columns[2])??0,
+                            lat: parseFloat(columns[3])??0
+                        };
+                    });
+                    
+
+                    console.log(JSON.stringify(jsonData, null, 2));
+
+                    var spec = {
+                        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                        "width": 550,
+                        "height": 350,
+                        "data": {
+                            "values": filteredData.map(row => {
+                                const columns = row.split(',');
+                                return {
+                                    "driver": columns[0].trim(),
+                                    "count": parseInt(columns[1]),
+                                    "long": parseFloat(columns[2]),
+                                    "lat": parseFloat(columns[3])
+                                };
+                            })
+                        },
+                        "projection": {
+                            "type": "equalEarth"
+                        },
+                        "layer": [
+                            {
+                                "data": {
+                                    "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
+                                    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+                                },
+                                "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+                            }, 
+                            {   
+                                "mark": "point",
+                                "encoding": {
+                                    "longitude": { "field": "long", "type": "quantitative" },
+                                    "latitude": { "field": "lat", "type": "quantitative" },
+                                    "color": {
+                                        "field": "count", 
+                                        "type": "quantitative",
+                                        "scale": {
+                                            "range": ["#f1807e", "#800000"]
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    };
+                    
+                    // Get the container element where you want to embed the chart
+                    var container = document.getElementById("driversWinsMap");
+                
+                    // Embed the chart in the container
+                    vegaEmbed(container, spec);
                 });
             })
             .catch(error => {

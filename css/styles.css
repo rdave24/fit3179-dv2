@@ -265,3 +265,15 @@
     font-size: large;
 	font-family: 'Titillium Web', sans-serif;
 }
+
+.select-container {
+    margin-bottom: 20px;
+}
+
+.data-container {
+    /* Your data container styles here */
+    width: 800px; /* Example width */
+    height: 400px; /* Example height */
+    overflow-y: auto; /* Enable vertical scrollbar if content overflows */
+    padding: 10px;
+}
