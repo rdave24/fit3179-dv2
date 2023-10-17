@@ -17,7 +17,8 @@
     "y": {
       "field": "races.fastestLapTime",
       "type": "nominal",
-      "title": "Fastest Lap Time"
+      "title": "Fastest Lap Time",
+      "sort": "descending"
     },
     "color": {
       "field": "_id",

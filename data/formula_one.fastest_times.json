@@ -163,7 +163,12 @@
     {
       "year": 2022,
       "fastestLapTime": "1:24.030"
+    },
+    {
+      "year": 2023,
+      "fastestLapTime": null
     }
+
   ]
 },
 {
@@ -321,6 +326,14 @@
       "fastestLapTime": "1:25.580"
     },
     {
+      "year": 2020,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2021,
+      "fastestLapTime": null
+    },
+    {
       "year": 2022,
       "fastestLapTime": "1:20.260"
     },
@@ -335,6 +348,18 @@
   "track": "Autodromo Enzo e Dino Ferrari",
   "races": [
     {
+      "year": 2009,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2008,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2007,
+      "fastestLapTime": null
+    },
+    {
       "year": 2006,
       "fastestLapTime": "1:24.569"
     },
@@ -345,6 +370,46 @@
     {
       "year": 2004,
       "fastestLapTime": "1:20.411"
+    },
+    {
+      "year": 2010,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2011,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2012,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2013,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2014,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2015,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2016,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2017,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2018,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2019,
+      "fastestLapTime": null
     },
     {
       "year": 2020,
@@ -419,6 +484,14 @@
     {
       "year": 2019,
       "fastestLapTime": "1:30.983"
+    },
+    {
+      "year": 2020,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2021,
+      "fastestLapTime": null
     },
     {
       "year": 2022,
@@ -529,6 +602,22 @@
       "fastestLapTime": "1:45.599"
     },
     {
+      "year": 2007,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2006,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2005,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2004,
+      "fastestLapTime": null
+    },
+    {
       "year": 2010,
       "fastestLapTime": "1:47.976"
     },
@@ -569,6 +658,14 @@
       "fastestLapTime": "1:42.301"
     },
     {
+      "year": 2020,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2021,
+      "fastestLapTime": null
+    },
+    {
       "year": 2022,
       "fastestLapTime": "1:46.458"
     }
@@ -589,6 +686,10 @@
     {
       "year": 2007,
       "fastestLapTime": "1:48.036"
+    },
+    {
+      "year": 2006,
+      "fastestLapTime": null
     },
     {
       "year": 2005,
@@ -643,6 +744,10 @@
       "fastestLapTime": "1:47.483"
     },
     {
+      "year": 2021,
+      "fastestLapTime": null
+    },
+    {
       "year": 2022,
       "fastestLapTime": "1:49.354"
     },
@@ -656,6 +761,46 @@
   "_id": "Red Bull Ring",
   "track": "Red Bull Ring",
   "races": [
+    {
+      "year": 2009,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2008,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2007,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2006,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2005,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2004,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2010,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2011,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2012,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2013,
+      "fastestLapTime": null
+    },
     {
       "year": 2014,
       "fastestLapTime": "1:12.142"
@@ -736,7 +881,11 @@
     },
     {
       "year": 2010,
-      "fastestLapTime": "1:58.287"
+      "fastestLapTime": null
+    },
+    {
+      "year": 2011,
+      "fastestLapTime": null
     },
     {
       "year": 2012,
@@ -773,10 +922,6 @@
     {
       "year": 2020,
       "fastestLapTime": "1:32.014"
-    },
-    {
-      "year": 2020,
-      "fastestLapTime": "0:55.404"
     },
     {
       "year": 2022,
@@ -859,6 +1004,10 @@
     {
       "year": 2019,
       "fastestLapTime": "1:10.698"
+    },
+    {
+      "year": 2020,
+      "fastestLapTime": null
     },
     {
       "year": 2021,
@@ -969,6 +1118,10 @@
       "fastestLapTime": "1:36.169"
     },
     {
+      "year": 2020,
+      "fastestLapTime": null
+    },
+    {
       "year": 2021,
       "fastestLapTime": "1:38.485"
     },
@@ -983,8 +1136,16 @@
   "track": "Hockenheimring",
   "races": [
     {
+      "year": 2009,
+      "fastestLapTime": null
+    },
+    {
       "year": 2008,
       "fastestLapTime": "1:15.987"
+    },
+    {
+      "year": 2007,
+      "fastestLapTime": null
     },
     {
       "year": 2006,
@@ -1007,12 +1168,24 @@
       "fastestLapTime": "1:18.725"
     },
     {
+      "year": 2013,
+      "fastestLapTime": null
+    },
+    {
       "year": 2014,
       "fastestLapTime": "1:19.908"
     },
     {
+      "year": 2015,
+      "fastestLapTime": null
+    },
+    {
       "year": 2016,
       "fastestLapTime": "1:18.442"
+    },
+    {
+      "year": 2017,
+      "fastestLapTime": null
     },
     {
       "year": 2018,
@@ -1043,6 +1216,10 @@
     {
       "year": 2019,
       "fastestLapTime": "1:43.009"
+    },
+    {
+      "year": 2020,
+      "fastestLapTime": null
     },
     {
       "year": 2021,
@@ -1187,6 +1364,22 @@
     {
       "year": 2019,
       "fastestLapTime": "1:34.742"
+    },
+    {
+      "year": 2020,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2021,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2022,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2023,
+      "fastestLapTime": null
     }
   ]
 },
@@ -1259,6 +1452,10 @@
       "fastestLapTime": "1:14.279"
     },
     {
+      "year": 2020,
+      "fastestLapTime": null
+    },
+    {
       "year": 2021,
       "fastestLapTime": "1:12.909"
     },
@@ -1276,6 +1473,10 @@
   "_id": "Circuit Gilles Villeneuve",
   "track": "Circuit Gilles Villeneuve",
   "races": [
+    {
+      "year": 2009,
+      "fastestLapTime": null
+    },
     {
       "year": 2008,
       "fastestLapTime": "1:17.387"
@@ -1335,6 +1536,14 @@
     {
       "year": 2019,
       "fastestLapTime": "1:13.078"
+    },
+    {
+      "year": 2020,
+      "fastestLapTime": null
+    },
+    {
+      "year": 2021,
+      "fastestLapTime": null
     },
     {
       "year": 2022,
