@@ -249,6 +249,8 @@
     color: black;
     text-align: center;
 	font-size: 16px;
+	padding-left: 20px;
+	padding-right: 2%;
 }
 
 #stacked_bar_chart {
