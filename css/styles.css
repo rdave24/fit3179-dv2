@@ -254,11 +254,14 @@
 	padding-right: 2%;
 }
 
-#stacked_bar_chart {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+.driver-select-option{
+	margin-top: 30px;
+    position: relative;
+    background-color: red;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: large;
+	font-family: 'Titillium Web', sans-serif;
 }
