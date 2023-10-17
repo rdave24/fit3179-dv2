@@ -1,33 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 400,
-  "height": 300,
+  "width": 800,
+  "height": 600,
   "data": {
-    "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.fastest_times.json"
+    "url": ""
   },
   "transform": [
-    {"flatten": ["races"]}
+    {"flatten": ["nationality"]},
+    {"calculate": "1", "as": "count"}
   ],
   "encoding": {
-    "x": {
-      "field": "races.year",
-      "type": "ordinal",
-      "title": "Year"
-    },
-    "y": {
-      "field": "races.fastestLapTime",
-      "type": "nominal",
-      "title": "Fastest Lap Time",
-      "sort": "descending"
-    },
-    "color": {
-      "field": "_id",
-      "type": "nominal",
-      "title": "Track"
-    }
+    "x": {"field": "_id", "type": "ordinal", "title": "Year"},
+    "y": {"field": "count", "type": "quantitative", "title": "Number of Drivers"},
+    "color": {"field": "nationality", "type": "nominal", "title": "Nationality"}
   },
-  "mark": {
-    "type": "line",
-    "point": true
+  "mark": "bar",
+  "config": {
+    "axisX": {"labelAngle": 0}
   }
 }

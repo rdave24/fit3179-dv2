@@ -59,6 +59,20 @@
                 </div>
                 <div class="grid-item-tracks-graph" id="europe"></div>
             </div>
+
+            <div class="grid-container-tracks">
+                <div class="grid-item-tracks-map" id="trackTimes"></div>
+                <div class="grid-item-tracks-map-text"> 
+                    If we look at the track data, for the fastest lap times, we can see that the 
+                    most times actually increased from 2004 to 2013, with then the track times 
+                    then reducing. The drop in track times in 2014 can be attributed to the major 
+                    engine rule changes that were introduced in 2014. Another effect of the rules
+                    can be seen 2018, where all the tracks had a quicker time, this was due to 
+                    another change in wings which aimed to increase to top speed of the cars. While
+                    you would expect engineering and team development to lead to faster times, the
+                    rules and regulations of the sport have a major impact on the track times.
+                </div>
+            </div>
         </div>
     </div>
 
@@ -73,7 +87,8 @@
                     <div class="grid-item-champions-text">
                         We can see most of the drivers that have ever won a championship are majoirty
                         from Europe, with not a single winner from Asia. Michael Schumacher and Lewis
-                        Hamilton currently hold the record for the most championships won with 7 each.
+                        Hamilton currently hold the record for the most championships won with 7 each. 
+                        This is more statitics that show that F1 is still a european dominated sport.
                     </div>
                 </div>
             </div>
@@ -83,6 +98,7 @@
     <div class="body">
         <div class="box">
             <h1>Constructors</h1>
+            <div id="trackTimes"></div>
         </div>
     </div>
 
@@ -265,6 +281,71 @@
 
         // Get the container element where you want to embed the chart
         var container = document.getElementById("driversPieChart");
+
+        // Embed the chart in the container
+        vegaEmbed(container, spec);
+    </script>
+
+
+    <!---
+    JSON data for track times
+    --->
+    <script>
+        var spec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": 500,
+            "height": 300,
+            "data": {
+                "url": "https://raw.githubusercontent.com/rdave24/rdave24.github.io/main/data/formula_one.fastest_times.json"
+            },
+            "transform": [
+                {"flatten": ["races"]},
+                {"filter": "datum.races.fastestLapTime !== null"}
+            ],
+            "encoding": {
+                "x": {
+                "field": "races.year",
+                "type": "ordinal",
+                "title": "Year"
+                },
+                "y": {
+                "field": "races.fastestLapTime",
+                "type": "nominal",
+                "title": "Fastest Lap Time",
+                "sort": "descending",
+                "axis": null
+                },
+                "color": {
+                "field": "_id",
+                "type": "nominal",
+                "title": "Track",
+                "scale": {
+                "domain": ["Hungaroring", "Autodromo Nazionale di Monza", "Circuit de Barcelona-Catalunya", "Albert Park Grand Prix Circuit", "Autodromo Enzo e Dino Ferrari", 
+                        "Suzuka Circuit", "Silverstone Circuit", "Marina Bay Street Circuit", "Circuit de Spa-Francorchamps", "Red Bull Ring", "Bahrain International Circuit", 
+                        "Autódromo José Carlos Pace", "Sepang International Circuit", "Circuit of the Americas", "Hockenheimring", "Baku City Circuit", "Yas Marina Circuit", 
+                        "Shanghai International Circuit", "Circuit de Monaco", "Circuit Gilles Villeneuve"],
+                "range": ["#000000", "#FF0000", "#F88379", "#0047AB", "#AA4A44",
+                        "#6F8FAF", "#808080","#BD33FF", "#33DBFF","#702963", "#013220",
+                        "#E75480", "#088F8F","#FFC0CB", "#FFAA33","#00A36C", "#90EE90",
+                        "#93C572", "#FFBF00", "#800080"]
+            }
+                }
+            },
+            "selection": {
+                "trackLegend": {
+                "type": "multi", 
+                "fields": ["_id"],
+                "bind": "legend"
+                }
+            },
+            "mark": {
+                "type": "line",
+                "point": false
+            }
+        }
+
+        // Get the container element where you want to embed the chart
+        var container = document.getElementById("trackTimes");
 
         // Embed the chart in the container
         vegaEmbed(container, spec);
