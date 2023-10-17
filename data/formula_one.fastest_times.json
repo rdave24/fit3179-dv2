@@ -167,28 +167,6 @@
   ]
 },
 {
-  "_id": "Indianapolis Motor Speedway",
-  "track": "Indianapolis Motor Speedway",
-  "races": [
-    {
-      "year": 2007,
-      "fastestLapTime": "1:13.117"
-    },
-    {
-      "year": 2006,
-      "fastestLapTime": "1:12.719"
-    },
-    {
-      "year": 2005,
-      "fastestLapTime": "1:11.497"
-    },
-    {
-      "year": 2004,
-      "fastestLapTime": "1:10.399"
-    }
-  ]
-},
-{
   "_id": "Circuit de Barcelona-Catalunya",
   "track": "Circuit de Barcelona-Catalunya",
   "races": [
@@ -383,46 +361,6 @@
   ]
 },
 {
-  "_id": "Korean International Circuit",
-  "track": "Korean International Circuit",
-  "races": [
-    {
-      "year": 2010,
-      "fastestLapTime": "1:50.257"
-    },
-    {
-      "year": 2011,
-      "fastestLapTime": "1:39.605"
-    },
-    {
-      "year": 2012,
-      "fastestLapTime": "1:42.037"
-    },
-    {
-      "year": 2013,
-      "fastestLapTime": "1:41.380"
-    }
-  ]
-},
-{
-  "_id": "Buddh International Circuit",
-  "track": "Buddh International Circuit",
-  "races": [
-    {
-      "year": 2011,
-      "fastestLapTime": "1:27.249"
-    },
-    {
-      "year": 2012,
-      "fastestLapTime": "1:28.203"
-    },
-    {
-      "year": 2013,
-      "fastestLapTime": "1:27.679"
-    }
-  ]
-},
-{
   "_id": "Suzuka Circuit",
   "track": "Suzuka Circuit",
   "races": [
@@ -575,28 +513,6 @@
     {
       "year": 2023,
       "fastestLapTime": "1:30.275"
-    }
-  ]
-},
-{
-  "_id": "Circuit Paul Ricard",
-  "track": "Circuit Paul Ricard",
-  "races": [
-    {
-      "year": 2018,
-      "fastestLapTime": "1:34.225"
-    },
-    {
-      "year": 2019,
-      "fastestLapTime": "1:32.740"
-    },
-    {
-      "year": 2021,
-      "fastestLapTime": "1:36.404"
-    },
-    {
-      "year": 2022,
-      "fastestLapTime": "1:35.781"
     }
   ]
 },
@@ -867,46 +783,6 @@
     {
       "year": 2023,
       "fastestLapTime": "1:07.012"
-    }
-  ]
-},
-{
-  "_id": "Fuji Speedway",
-  "track": "Fuji Speedway",
-  "races": [
-    {
-      "year": 2008,
-      "fastestLapTime": "1:18.426"
-    },
-    {
-      "year": 2007,
-      "fastestLapTime": "1:28.193"
-    }
-  ]
-},
-{
-  "_id": "Circuit de Nevers Magny-Cours",
-  "track": "Circuit de Nevers Magny-Cours",
-  "races": [
-    {
-      "year": 2008,
-      "fastestLapTime": "1:16.630"
-    },
-    {
-      "year": 2007,
-      "fastestLapTime": "1:16.099"
-    },
-    {
-      "year": 2006,
-      "fastestLapTime": "1:17.111"
-    },
-    {
-      "year": 2005,
-      "fastestLapTime": "1:16.423"
-    },
-    {
-      "year": 2004,
-      "fastestLapTime": "1:15.377"
     }
   ]
 },
@@ -1263,48 +1139,6 @@
   ]
 },
 {
-  "_id": "Losail International Circuit",
-  "track": "Losail International Circuit",
-  "races": [
-    {
-      "year": 2021,
-      "fastestLapTime": "1:23.196"
-    }
-  ]
-},
-{
-  "_id": "Autódromo Internacional do Algarve",
-  "track": "Autódromo Internacional do Algarve",
-  "races": [
-    {
-      "year": 2020,
-      "fastestLapTime": "1:18.750"
-    },
-    {
-      "year": 2021,
-      "fastestLapTime": "1:19.865"
-    }
-  ]
-},
-{
-  "_id": "Jeddah Corniche Circuit",
-  "track": "Jeddah Corniche Circuit",
-  "races": [
-    {
-      "year": 2021,
-      "fastestLapTime": "1:30.734"
-    },
-    {
-      "year": 2022,
-      "fastestLapTime": "1:31.634"
-    },
-    {
-      "year": 2023,
-      "fastestLapTime": "1:31.906"
-    }
-  ]
-},
-{
   "_id": "Valencia Street Circuit",
   "track": "Valencia Street Circuit",
   "races": [
@@ -1613,44 +1447,6 @@
     {
       "year": 2021,
       "fastestLapTime": "1:37.423"
-    }
-  ]
-},
-{
-  "_id": "Autodromo Internazionale del Mugello",
-  "track": "Autodromo Internazionale del Mugello",
-  "races": [
-    {
-      "year": 2020,
-      "fastestLapTime": "1:18.833"
-    }
-  ]
-},
-{
-  "_id": "Circuit Park Zandvoort",
-  "track": "Circuit Park Zandvoort",
-  "races": [
-    {
-      "year": 2021,
-      "fastestLapTime": "1:11.097"
-    },
-    {
-      "year": 2022,
-      "fastestLapTime": "1:13.652"
-    }
-  ]
-},
-{
-  "_id": "Miami International Autodrome",
-  "track": "Miami International Autodrome",
-  "races": [
-    {
-      "year": 2022,
-      "fastestLapTime": "1:31.361"
-    },
-    {
-      "year": 2023,
-      "fastestLapTime": "1:29.708"
     }
   ]
 },
